@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		
+		<script type="text/javascript">
+			function createCar(carName, carColor, carSpeed) {
+				var carObj = {
+					carName : carName,
+					carColor : carColor,
+					carSpeed : carSpeed,
+					carRun : function() {
+						return this.carSpeed + "km/h";
+					}
+				};
+				return carObj;
+			}
+			var sorento = createCar("Sorento", "Red", 250);
+			console.log(sorento.carName);
+			console.log(sorento.carRun());
+			console.log("--------------------------");
+			
+/*--------------------------------------------------------------------------*/		
+			function Airplane(name, color, speed) {
+				this.name = name;
+				this.color = color;
+				this.speed = speed;
+				this.fly = function() {
+					return this.speed + "km/h fly!";
+				};
+			}
+		
+			var boeing747 = new Airplane("Boeing747", "white/blue", 500);
+			console.log("boeing747's name : " + boeing747.name);
+			console.log("boeing747's color : " + boeing747.color);
+			console.log("boeing747's speed : " + boeing747.speed);
+			console.log("boeing747's fly : " + boeing747.fly());
+			console.log("--------------------------");
+/*--------------------------------------------------------------------------*/
+			function Scoring(name, kor, math, eng) {
+				this.name =  name;
+				this.kor = kor;
+				this.math = math;
+				this.eng =  eng;
+			}
+			
+			Scoring.prototype.getTotal = function() {
+				return this.kor + this.math + this.eng;
+			}
+			
+			Scoring.prototype.getAverage = function() {
+				return (this.getTotal() / 3).toFixed(3);
+			}
+			
+			var player1 = new Scoring("kim", 90, 75, 68);
+			console.log(player1.name +"'s Total Score : " +player1.getTotal());
+			console.log(player1.name +"'s Average Score : " +player1.getAverage());
+			console.log("--------------------------");
+/*--------------------------------------------------------------------------*/
+			function BMICalculator() {
+				var height = 0;
+				var weight = 0;
+				
+				this.bmi = function() {
+					return (this.weight / (this.weight * this.height)).toFixed(2);
+				};
+				
+				this.getHeight = function() {
+					return this.height;
+				};
+				
+				this.setHeight = function(height) {
+					if(!isNaN(height)) {
+						this.height = height;	
+					} else {
+						console.log("Height is Not a Number");
+					}
+				};
+				
+				this.getWeight = function() {
+					return this.weight;
+				};
+				
+				this.setWeight = function(weight) {
+					if(!isNaN(weight)) {
+						this.weight = weight;	
+					} else {
+						console.log("Weight is Not a Number");
+					}
+				};
+	
+			}
+			
+			var myBMI = new BMICalculator();
+			myBMI.setHeight(1.78);
+			myBMI.setWeight(80);
+			console.log("My BMI : " +myBMI.bmi());
+			
+			
+		</script>
+	</head>
+
+<body>
+
+</body>
+</html>

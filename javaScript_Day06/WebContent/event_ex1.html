@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function eventHandler() {
+				console.log("Click!!");
+				
+				/* 이벤트제거
+				var removeHandler = document.getElementById("inline");
+				removeHandler.onclick = null; */
+			}
+		</script>
+		
+		<script type="text/javascript">
+			window.onload = function() {
+				var eventHandler1 = document.getElementById("primary1");
+				eventHandler1.onclick = function() {
+					console.log("Click!");
+					
+					/* 이벤트제거
+					event.onclick = null; */
+				}
+				
+				var eventHandler2 = document.getElementById("primary2");
+				eventHandler2.onclick = eventHandler;
+				function eventHandler() {
+					console.log("Click!");
+					
+					/* 이벤트제거
+					event2.onclick = null; */
+				}
+			};
+			
+		</script>
+		
+		<style type="text/css">
+			#inline {
+				width: 200px;
+				height: 100px;
+				line-height:100px;
+				text-align: center;
+				font-size: 1.2em;
+				background-color: powderblue;
+				font-weight: bolder;
+			}
+			
+			#primary1, #primary2 {
+				width: 200px;
+				height: 100px;
+				line-height:100px;
+				text-align: center;
+				font-size: 1.2em;
+				background-color: tomato;
+				font-weight: bolder;
+			}
+		</style>
+	</head>
+		
+	<body>
+		<div id="inline" onclick="eventHandler();">인라인 모델</div>
+		<hr>
+		<div id="primary1">기본모델1</div>
+		<hr>
+		<div id="primary2">기본모델2</div>
+	</body>
+</html>

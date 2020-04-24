@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			window.onload = function () {
+				var msModel = document.getElementById("msModel");
+				var eventListener1 = function() {
+					console.log("DOM level2 MS이벤트 모델입니다.")
+				}
+				
+				var eventListener2 = function() {
+					this.style.backgroundColor = "blue";
+					this.style.color = "white";
+				}
+				
+				msModel.attachEvent("onclick", eventListener1);
+				msModel.attachEvent("onclick", eventListener2);
+				msModel.detachEvent("onclick", eventListener1);
+				msModel.detachEvent("onclick", eventListener2);
+			};	
+		</script>
+	</head>
+	<body>
+		<button id="msModel" >MS 이벤트 모델 : 이벤트연결</button>
+		<hr>
+		<button id="msModel" >MS 이벤트 모델 : 이벤트제거</button>
+	</body>
+</html>

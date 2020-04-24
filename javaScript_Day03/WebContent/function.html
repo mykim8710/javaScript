@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function funName() {
+		console.log("명시적 함수의 기능을 실행합니다.");
+	}
+	
+	var funAnonymous = function() {
+		console.log("익명 함수의 기능을 실행합니다.");
+	}
+	
+	funName();
+	funAnonymous();
+	
+	console.log("funName : " +funName);
+	console.log("funAnonymous : " +funAnonymous);
+	
+	
+	console.log("funName : " +funName());
+	console.log("funAnonymous : " +funAnonymous()); 
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

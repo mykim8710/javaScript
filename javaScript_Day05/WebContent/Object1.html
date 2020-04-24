@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		
+		<script type="text/javascript">
+			var objCar = {
+					width : "3m",
+					height : "2m",
+					cc : "2000cc",
+					energy : 100,
+					speed : function(power) {
+						return this.energy * power;
+					}
+			};
+			console.log("objCar's width : " +objCar.width);
+			console.log("objCar's height : " +objCar.height);
+			console.log("objCar's speed : " +objCar.speed(2));
+			console.log("-------------------------");
+			
+			for ( var key in objCar) {
+				console.log(key +" : " +objCar[key]);
+			}
+			
+			console.log("-------------------------");
+			
+			var objName = {
+					nation :"korea",
+					capital : "seoul",
+					language : "hanguel",
+					population : 5100000,
+					nationalAnthem : function() {
+						console.log("play korean national anthem~~");
+					}
+			};
+			
+			console.log("nation : " +objName.nation);
+			console.log("capital : " +objName.capital);
+			console.log("population : " +objName.population);
+			objName.nationalAnthem();
+			console.log("-------------------------");
+			
+			var obj = {
+					name :"Lee Sun Shin",
+					nation : "KOREA",
+					gender : "male",
+					character : "good"
+			};
+			
+			console.log("nation" in obj);
+			console.log("age" in obj);
+			with(obj) {
+				console.log(name);
+				console.log(nation);
+				console.log(gender);
+				console.log(character);
+			}
+			
+		</script>
+	</head>
+
+	<body>
+	
+	</body>
+</html>

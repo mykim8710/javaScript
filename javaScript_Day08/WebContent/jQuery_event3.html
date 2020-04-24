@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jQuery/jquery-3.4.1.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#loginForm").submit(function(event) {
+					if ($("#uid").val() == "") {
+						alert("User id is empty!!");
+						event.preventDefault();
+					}else if($("#upw").val() == "") {
+						alert("User pw is empty!!");
+						event.preventDefault();
+					} else{
+						alert("Login Ok");
+					}
+				});
+			 });
+		</script>
+
+	</head>
+	
+	<body>
+		<form id="loginForm" action="http://www.daum.net">
+			ID <input id="uid" type="text" name="uid"><br>
+			PW <input id="upw" type="password" name="upw"><br>
+			<input id="submitBtn" type="submit" value="SUBMIT">
+			<input id="resetBtn" type="reset" value="RESET">
+		</form>
+	</body>
+</html>

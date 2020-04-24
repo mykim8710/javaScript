@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jQuery/jquery-3.4.1.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				function eventListener() {
+					console.log("this : " + this);
+					console.log("click");
+					
+					for ( var key in event) {
+						console.log(key +" : " +event[key]);
+					}
+					
+				}
+				
+				$("#divObj").click(eventListener);
+				$("#paraObj").click(eventListener);
+			 });
+		</script>
+
+	</head>
+	
+	<body>
+		<div id="divObj">Object Division</div>
+		<p id="paraObj">Object Paragraph</p>
+	</body>
+</html>

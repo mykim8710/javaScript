@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		
+		<script type="text/javascript">
+			var child = window.open("","child","width=400, height=300");
+			var width = screen.width;
+			var height = screen.height;
+			
+			child.moveTo(0,0);
+			child.resizeTo(width, height);
+						
+			var setter = function() {
+				child.resizeBy(-10, -10);
+ 				child.moveBy(10,10);
+			};
+			
+			setInterval(setter, 500);
+				
+				
+		</script>
+	</head>
+	
+	<body>
+	
+	</body>
+</html>

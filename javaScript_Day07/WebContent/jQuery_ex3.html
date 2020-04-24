@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jQuery/jquery-3.4.1.min.js"></script>
+				
+		<script>
+		$(document).ready(function() {
+			$("input[type='text']").css("color", "red");      // 속성선택자
+			$("input[type='password']").css("color", "blue"); // 속성선택자			
+			$("input:submit").css("fontSize", "1.2em");       // 필터선택자
+			var checked = $("input:checked").val();           // 필터선택자
+			console.log("checked : " + checked);
+			$("li:nth-child(2n+1)").css("background-color", "skyblue"); // 함수선택자
+		});
+		</script>
+	</head>
+	
+	<body>
+		<form action="http://www.google.com">
+			UserID : <input type="text"><br>
+			UserPW : <input type="password"><br>
+			<input type="submit" value="SUBMIT">
+			<input type="reset" value="RESET"><br><br>
+			Food<br>
+			사과<input type="checkbox" id="apple" value="사과">
+			바나나<input type="checkbox" id="banana" value="바나나" checked="checked">
+			수박<input type="checkbox" id="watermelon" value="수박"><br>
+			
+			<ul>
+				<li>이만기</li>
+				<li>이승엽</li>
+				<li>이종범</li>
+				<li>이재학</li>
+				<li>이순철</li>
+				<li>이길동</li>
+				<li>이동국</li>
+			</ul>
+		</form>
+	</body>
+</html>

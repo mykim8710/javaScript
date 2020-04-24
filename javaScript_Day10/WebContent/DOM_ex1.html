@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		
+		<script type="text/javascript">
+			window.onload = function() {
+				var elementNode = document.createElement("h1");
+				var textNode = document.createTextNode("Hello World");
+				elementNode.appendChild(textNode);
+				document.body.appendChild(elementNode);
+				
+				var imgNode = document.createElement("img");
+				imgNode.setAttribute("src", "./img/test.jpg");
+				imgNode.setAttribute("alt", "이미지가 깨졌습니다");
+				imgNode.setAttribute("width", "200");
+				imgNode.setAttribute("height", "150");
+				document.body.appendChild(imgNode);
+			};
+		
+			 
+		</script>
+	</head>
+	
+	<body>
+	
+	</body>
+</html>

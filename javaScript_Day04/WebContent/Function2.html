@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//Inner Function
+	function getArea(width, height) {
+		console.log("삼각형의 넓이 : " + getTriangleArea());
+		console.log("사각형의 넓이 : " + getRectangleArea());
+
+		function getTriangleArea() {
+			return width * height * 0.5;
+		}
+
+		function getRectangleArea() {
+			return width * height;
+		}
+	}
+
+	console.log("---------------------------------------------");
+
+	//CallBack Function
+	function mainFun(funCBF, funCBP, n) {
+		for (var i = 1; i <= 10; i++) {
+			console.log(n + " x " + i + " = " + (n * i));
+			if (i < 10) {
+				funCBP(i);
+			} else {
+				funCBF();
+			}
+		}
+	}
+
+	function funCallBackProgress(i) {
+		console.log((i * 10) + "% 진행완료");
+	}
+
+	function funCallBackFinish() {
+		console.log("작업완료");
+	}
+	
+	mainFun(funCallBackFinish, funCallBackProgress, 7);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

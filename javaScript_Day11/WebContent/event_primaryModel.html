@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			window.onload = function () {
+				var primaryModel = document.getElementById("primaryModel");
+				primaryModel.onclick = function() {
+					this.style.color = "red";
+					console.log("기본이벤트모델입니다.");
+					
+					/* 이벤트 제거
+					primaryModel.onclick =  null; */
+				}
+			};	
+		</script>
+	</head>
+	<body>
+		<button id="primaryModel" >기본이벤트 모델</button>
+	</body>
+</html>

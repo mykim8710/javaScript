@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jQuery/jquery-3.4.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#btn").click(function(){
+					var result = document.getElementById("ajaxValue");
+					var result2 = $("#ajaxValue2")[0];
+					
+					$.ajax({
+						url: "./json.jsp",  //요청할 URL의미
+						type: "POST", // 데이터 전송방식 GET or POST
+						cache: false,   // 요청페이지의 캐시여부, false or true
+						dataType:"json",  // 서버에서 받아올 데이터를 어떤 형태로 해석할 것인지-xml json html script
+						/* data:"", // 서버로 데이터를 전송할때 사용(key:value) */
+						success: function(data) {  // Ajax통신이 성공할때 실행되는 이벤트
+							console.log(result.innerHTML = data.study.ajax);
+							console.log(result2.innerHTML = data.study.react);
+						},
+						error: function(request, status, error) {// Ajax통신이 실패할때 실행되는 이벤트 : request, status, error 정보를 확인할 수 있다
+							console.log(request.responseText);
+							console.log(error);
+						}
+					})
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+		<input id="btn" type="button" value="click">
+		<div id="ajaxValue"></div>
+		<div id="ajaxValue2"></div>
+	</body>
+</html>

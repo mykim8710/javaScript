@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var varResult = 0;
+	for (var i = 0; i < 10; i++) {
+		if (i % 2 == 0 || i % 3 == 0) {
+			continue;
+		}
+		console.log("i : " + i);
+		varResult += i;
+	}
+	console.log("varResult : " + varResult);
+
+	var varNum = 0;
+	var varSum = 0;
+	while (varNum < 10) {
+		console.log("varNum : " + varNum);
+		varSum += varNum;
+		varNum++;
+
+		if (varSum > 20) {
+			console.log("varSum " + varSum);
+			break;
+		}
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

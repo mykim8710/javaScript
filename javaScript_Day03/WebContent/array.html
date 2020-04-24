@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var varArr1 = new Array();
+	var varArr2 = new Array(5);
+	var varArr3 = new Array(123, "abc", true, function fun(){}, {}, undefined);
+	var varArr4 = [123, "abc", true, function fun(){}, {}, undefined];
+	
+	console.log("varArr1 : " + varArr1);
+	console.log("varArr2 : " + varArr2);
+	console.log("varArr3 : " + varArr3);
+	console.log("varArr4 : " + varArr4);
+	console.log(varArr1.length);
+	console.log(varArr2.length);
+	console.log(varArr3.length);
+	console.log(varArr4.length);
+	
+	varArr1[0] = 1;
+	console.log("varArr1 : " + varArr1);
+	
+	varArr1[1] = 2;
+	console.log("varArr1 : " + varArr1);
+	
+	varArr1[2] = 3;
+	console.log("varArr1 : " + varArr1);
+	
+	var varArr5 = new Array(123,"abc", "가나다", "abc", "가나다",123);
+	console.log("index of 123 : " + varArr5.indexOf(123));
+	console.log("index of 123 : " + varArr5.lastIndexOf(123));
+	console.log("index of abc : " + varArr5.indexOf("abc"));
+	console.log("index of 123 : " + varArr5.lastIndexOf("가나다"));
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

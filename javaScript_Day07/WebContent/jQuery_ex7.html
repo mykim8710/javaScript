@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jQuery/jquery-3.4.1.min.js"></script>
+				
+		<script>
+			$(document).ready(function() {
+				var wrapObj = $("#wrap");
+				
+				var pObj1 = $("<p>appendTo Test</p>");
+				pObj1.css("background","skyblue");
+				pObj1.appendTo(wrapObj);
+								
+				var pObj2 = $("<p>append Test</p>");
+				pObj2.css("background","tomato");
+				wrapObj.append(pObj2);
+
+				var pObj3 = $("<p>pretendTo Test</p>");
+				pObj3.css("background","green");
+				pObj3.prependTo(wrapObj);
+				
+				var pObj4 = $("<p>pretend Test</p>");
+				pObj4.css("background","red");
+				wrapObj.prepend(pObj4);
+				
+				var divObj1 = $("<div>insertAfter Test</div>");
+				divObj1.css("color", "blue");
+				divObj1.insertAfter(wrapObj);
+				
+				var divObj2 = $("<div>after Test</div>");
+				divObj2.css("color", "red");
+				wrapObj.after(divObj2);
+				
+				var divObj3 = $("<div>insertBefore Test</div>");
+				divObj3.css("color", "green");
+				divObj3.insertBefore(wrapObj);
+				
+				var divObj4 = $("<div>before Test</div>");
+				divObj4.css("color", "yellow");
+				wrapObj.before(divObj4);
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="wrap">
+			
+		</div>
+	</body>
+</html>

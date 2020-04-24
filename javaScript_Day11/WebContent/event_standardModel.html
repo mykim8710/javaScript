@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			window.onload = function () {		
+			 	function eventAdd() {
+						console.log("표준 이벤트 모델입니다.");
+						this.style.color="white";
+						this.style.backgroundColor="blue";
+				};
+				
+				function eventRemove() {
+						console.log("표준이벤트 모델을 제거합니다.");
+				};
+				
+				var standardModelAdd = document.getElementById("standardModelAdd");
+				standardModelAdd.addEventListener("click", eventAdd, false);
+				
+				var standardModelRemove = document.getElementById("standardModelRemove");
+				standardModelRemove.addEventListener("click", eventRemove, false);
+			};	
+		</script>
+	</head>
+	<body>
+		<button id="standardModelAdd" >표준 이벤트 모델 : 이벤트 연결</button>
+		<hr>
+		<button id="standardModelRemove" >표준 이벤트 모델 : 이벤트 제거</button>
+	</body>
+</html>

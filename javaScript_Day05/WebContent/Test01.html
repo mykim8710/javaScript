@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var ObjBook = {
+		name : "Nature of Code",
+		price : "30000DNJS",
+		author : "Daniel Shiffman",
+		ISBN : 9788968481901,
+		page : 620,
+		bookInfo : function() {
+			console.log("제목 : " + this.name);
+			console.log("가격 : " + this.price);
+			console.log("저자 : " + this.author);
+			console.log("ISBN : " + this.ISBN);
+			console.log("페이지 : " + this.page);
+		}
+	};
+
+	ObjBook.bookInfo();
+	console.log("");
+	console.log("-----------------------------------");
+	console.log("");
+
+	function martCalculator(item, gramUnit, price) {
+		this.item = item;
+		this.gramUnit = gramUnit;
+		this.price = price;
+
+		this.calculate = function(weight) {
+			console.log(this.item + " " + weight + "g의 가격은 " + ((this.price * weight) / this.gramUnit).toFixed(0) + "원 입니다.");
+		};
+	};
+
+	var meatPrice = new martCalculator("삼겹살", 100, 1690);
+	meatPrice.calculate(200);
+	var cherryPrice = new martCalculator("체리", 100, 540);
+	cherryPrice.calculate(300);
+</script>
+</head>
+<body>
+
+</body>
+</html>

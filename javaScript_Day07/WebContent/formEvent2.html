@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			window.onload = function() {
+				var loginform = document.getElementById("loginform");
+				loginform.onsubmit = function() {
+					if (document.getElementById("uid").value == "") {
+						alert("User ID Blank");
+						return false;
+					} else if (document.getElementById("upw").value == "") {
+						alert("User PW Blank");
+						return false;
+					} else {
+						alert("Login Ok");
+						return true;
+					}
+				};
+			}
+		</script>
+	</head>
+	
+	<body>
+		<form id="loginform" action="http://www.naver.com">
+			UserID : <input id="uid" type="text" name="uid"><br>
+			UserPW : <input id="upw" type="password" name="upw"><br>
+			<input id="submitBtn" type="submit" value="SUBMIT">
+			<input id="resetBtn" type="reset" value="RESET">
+		</form>
+	</body>
+</html>

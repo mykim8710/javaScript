@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			window.onload = function() {
+				function addHandler_click() {
+					console.log("click");
+				}
+				
+				function addHandler_mouseOver() {
+					console.log("mouse Over");
+				}
+				
+				function addHandler_mouseOut() {
+					console.log("mouse Out");
+				}
+				
+				function addHandler_mouseMove() {
+					console.log("mouse Move");
+				}
+				
+				function addHandler_mouseDown() {
+					console.log("mouse Down");
+				}
+				
+				function addHandler_mouseUp() {
+					console.log("mouse Up");
+				}
+				
+				function addHandler_dbClick() {
+					console.log("double Click");
+				}
+				
+				var me = document.getElementById("mouseEvent"); 
+				me.addEventListener("click", addHandler_click, false);
+				me.addEventListener("mouseover", addHandler_mouseOver, false);
+				me.addEventListener("mouseout", addHandler_mouseOut, false);
+				me.addEventListener("mousemove", addHandler_mouseMove, false);
+				me.addEventListener("mousedown", addHandler_mouseDown, false);
+				me.addEventListener("mouseup", addHandler_mouseUp, false);
+				me.addEventListener("dblclick", addHandler_dbClick, false);
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div id="mouseEvent" style="border: 1px solid black;">마우스 이벤트</div>
+	</body>
+</html>

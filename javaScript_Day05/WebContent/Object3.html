@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		
+		<script type="text/javascript">
+			var strKOR = "가나다라마바사";
+			var strENG = "aBcDeFg";
+			String.prototype.temp = 123;
+			
+			console.log("strENG : " +strENG);
+			console.log("charAt() : " +strENG.charAt(3));
+			console.log("indexOf() : " +strENG.indexOf("c"));
+			console.log("concat() : " +strENG.concat("H"));
+			console.log("replace() : " +strENG.replace("a", "A"));
+			console.log("split() : " +strENG.split("c"));
+			console.log("slice() : " +strENG.slice(1,4));
+			console.log("substring() : " +strENG.substring(1,4));
+			console.log("---------------------------");
+			
+			var objDate1 =  new Date();
+			var objDate2 =  new Date(2020, 00, 05);
+			var objDate3 =  new Date(2020, 00, 02, 12, 36, 30);
+			
+			console.log(objDate1);
+			console.log(objDate2);
+			console.log(objDate3);
+			
+			console.log("objDate1.getYear : " +objDate1.getYear());
+			console.log("objDate1.getYear : " +(objDate1.getYear() + 1900));
+			console.log("objDate1.getFullYear : " +objDate1.getFullYear());
+			
+			console.log("objDate1.getMonth : " +objDate1.getMonth());
+			console.log("objDate1.getDate : " +objDate1.getDate());
+			console.log("objDate1.getDay : " +objDate1.getDay());
+			
+			
+			
+			console.log("objDate2.getMonth : " +objDate2.getMonth());
+			console.log("objDate2.getDate : " +objDate2.getDate());
+			console.log("objDate2.getDay : " +objDate2.getDay());
+			console.log("---------------------------");
+			
+			var array1 = new Array(1, 4, 5, 6, 7, 8, 2, 3);
+			
+			var asc = function(a, b) {
+				return a-b;
+			};
+			
+			var desc = function(a, b) {
+				return b-a;
+			};
+			
+			console.log("오름차순 정렬 : " +array1.sort(asc));
+			console.log("내림차순 정렬 : " +array1.sort(desc));
+			
+			var array2 = ["a", "h", "t", "b", "z"];
+			console.log("오름차순 정렬 : " +array2.sort());
+			console.log("내림차순 정렬 : " +array2.sort().reverse());
+		</script>
+	</head>
+
+	<body>
+	
+	</body>
+</html>

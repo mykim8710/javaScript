@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			window.onload = function() {
+				
+				function addHandler(e) {
+					console.log("click");
+					console.log("this : " +this);
+					
+					var event = e || window.event;
+					for ( var key in event) {
+						console.log(key + " : " + event[key]);
+					}	
+				};
+				
+				var objDiv = document.getElementById("objDiv");
+				objDiv.addEventListener("click", addHandler, false);
+				
+				var objPara = document.getElementById("objPara");
+				objPara.addEventListener("click", addHandler, false);
+			}
+			
+		</script>
+		<style type="text/css">
+			#objDiv {
+				width: 200px; height: 100px;
+				line-height: 100px;
+				text-align: center;
+				font-size: 1.2em;
+				background-color: #f00;
+				color: #fff;
+				font-weight: bolder;
+			}
+			
+			#objPara {
+				width: 200px; height: 100px;
+				line-height: 100px;
+				text-align: center;
+				font-size: 1.2em;
+				background-color: #0f0;
+				color: #fff;
+				font-weight: bolder;
+			}
+			
+			#eventProp {
+				width: 500px;
+				border: 1px solid #cccccc;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="objDiv">Object Division</div>
+		<p id="objPara">Object Paragraph</p>
+	</body>
+</html>

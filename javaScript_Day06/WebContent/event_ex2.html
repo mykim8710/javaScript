@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			window.onload = function() {
+				function addHandler() {
+					console.log("Click");
+				};
+				
+				function removeHandlerMS() {
+					console.log("event remove");
+					
+				};
+				
+				function removeHandlerStandard() {
+					console.log("event remove");
+					
+				};
+				
+				var 
+				
+				
+			};
+		</script>
+		
+		<style type="text/css">
+			#msHandlerAdd, #standardHandlerAdd {
+				width: 200px;
+				height: 100px;
+				line-height:100px;
+				text-align: center;
+				font-size: 1.2em;
+				background-color: powderblue;
+				font-weight: bolder;
+			}
+			
+			#msHandlerRemove, #standardHandlerRemove {
+				width: 200px;
+				height: 100px;
+				line-height:100px;
+				text-align: center;
+				font-size: 1.2em;
+				background-color: tomato;
+				font-weight: bolder;
+			}
+		</style>
+	</head>
+		
+	<body>
+		<div id="msHandlerAdd">MS 핸들러 모델 추가</div>
+		<div id="msHandlerRemove">MS 핸들러 모델 추가</div>
+		<hr>
+		<div id="standardHandlerAdd">표준 핸들러 모델 추가</div>
+		<div id="standardHandlerRemove">표준 핸들러 모델 제거</div>
+	</body>
+</html>

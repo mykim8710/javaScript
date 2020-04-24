@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jQuery/jquery-3.4.1.min.js"></script>
+				
+		<script>
+			$(document).ready(function() {
+				var wrapObj = $("#wrap");
+				wrapObj.click (function() {
+					var cloneObj = $("#wrap > .content1 > .p").clone();
+					cloneObj.appendTo($("#wrap > .content1"));
+				});
+			});
+		</script>
+			
+		<script>
+			$(document).ready(function() {
+				$(".show").click(function(){
+					$(".test").show();
+				});	
+				
+				$(".hide").click(function(){
+					$(".test").hide();
+				});
+			});
+		</script>
+		<style type="text/css">
+			#wrap .content1 .p {
+				background-color: skyblue;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="wrap">
+			<div class="content1">
+				<p class="p">content1</p>
+			</div>
+		</div>
+		
+		
+		<button class="show">SHOW</button>
+		<button class="hide">HIDE</button>
+		<p class='test'>enjoy jQuery~!!</p>
+		
+	</body>
+</html>

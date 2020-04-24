@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jQuery/jquery-3.4.1.min.js"></script>
+				
+		<script>
+			$(document).ready(function() {
+				var clone = $("#wrap > .content1 > .p").clone();
+				clone.appendTo($("#wrap > .content1"));
+			});
+		</script>
+		 
+		<style type="text/css">
+			#wrap .content1 .p {
+				background-color: tomato;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="wrap">
+			<div class="content1">
+				<p class="p">content1</p>
+			</div>
+
+		</div>
+	</body>
+</html>

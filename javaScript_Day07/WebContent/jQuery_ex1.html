@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jQuery/jquery-3.4.1.min.js"></script>
+				
+		<script>
+			/* window.onload = function() {
+				jQuery("p").css("lineHeight", "300px");
+				
+				$("p").css("color", "blue");
+				$("p").css("width", "500px");
+				$("p").css("height", "300px");
+				$("p").css("border", "1px solid #cccccc");
+			} */
+			
+			$(document).ready(function() {
+				jQuery("#p1").css("lineHeight", "300px");
+				$("#p1").css("color", "blue");
+				$("#p1").css("width", "500px");
+				$("#p1").css("height", "300px");
+				$("#p1").css("border", "1px solid skyblue");
+			});
+			
+			$(function() {
+				jQuery("#p2").css("lineHeight", "300px");
+				$("#p2").css("color", "red");
+				$("#p2").css("width", "500px");
+				$("#p2").css("height", "300px");
+				$("#p2").css("border", "1px solid tomato");
+			});
+			
+		</script>
+	</head>
+	
+	<body>
+		<p id="p1">Hello jQuery</p>
+		<p id="p2">Hello jQuery</p>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* 출력관련 내장함수 */
+	alert("내장함수 : 기본적으로 제공하는 함수");
+	console.log("내장함수 : 기본적으로 제공하는 함수");
+
+	/* 시간관련 내장함수 */
+	/* var setter1 = function() {
+		alert("3초 후 한번 실행됩니다.");
+	};
+	
+	var timeoutId = setTimeout(setter1, 3000);
+	clearTimeout(timeoutId);
+	
+	var setter2 = function() {
+		console.log("2초 마다 계속 실행됩니다.");
+	};
+	
+	var intervalId = setInterval(setter2, 2000);
+	clearInterval(intervalId); */
+
+	var setter3 = function() {
+		clearInterval(printIntervalId);
+		console.log("종료!");
+	};
+
+	var printTimeOutId = setTimeout(setter3, 7000);
+
+	var setter4 = function() {
+		console.log("*");
+	};
+
+	var printIntervalId = setInterval(setter4, 2000);
+</script>
+</head>
+<body>
+
+</body>
+</html>

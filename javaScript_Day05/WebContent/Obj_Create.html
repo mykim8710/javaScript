@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	console.log("1. 기본적인 객체생성(정의와 함께 생성)");
+	var ObjCar = {
+		color : "red",
+		cc : "2000",
+		maxSpeed : 220,
+		run : function() {
+			return "이 차는 " + this.maxSpeed + "km/h의 속도로 달립니다.";
+		}
+	};
+
+	console.log("ObjCar's color : " + ObjCar.color);
+	console.log("ObjCar's cc : " + ObjCar["cc"]);
+	console.log(ObjCar.run());
+	console.log("--------------------------------------");
+	console.log("");
+
+	console.log("2. 객체를 함수호출의 리턴값으로 하는 함수 정의");
+	function makeObj(manufacturer, name, cc, energy) {
+		var car = {
+			manufacturer : manufacturer,
+			name : name,
+			energy : energy,
+			cc : cc,
+			info : function(power) {
+				return this.manufacturer + "에서 제조한 " + this.name + "는 최대속도 "
+						+ (power * this.energy).toFixed(0) + "km/h, " + this.cc
+						+ "cc의 고급세단입니다.";
+			}
+		}
+		return car;
+
+	};
+
+	var KiaCar = makeObj("KIA", "K5", 2000, 100);
+	console.log(KiaCar.info(2.2));
+	console.log("--------------------------------------");
+	console.log("");
+
+	console.log("3. 생성자 함수정의하여 객체를 생성, 객체의 멤버변수에 바로 접근을 막기위해 getter/setter 함수도 정의");
+	function BMICalculator() {
+		var height = 0;
+		var weight = 0;
+
+		this.getHeight = function() {
+			return this.height;
+		};
+
+		this.setHeight = function(height) {
+			this.height = height;
+		};
+
+		this.getWeight = function() {
+			return this.weight;
+		};
+
+		this.setWeight = function(weight) {
+			this.weight = weight;
+		};
+
+		this.calBMI = function() {
+			var bmi = ((this.weight * 100) / (this.weight * this.height)).toFixed(2);
+			return bmi;
+		}
+	}
+	
+	var myBMI = new BMICalculator();
+	myBMI.setHeight(180);
+	myBMI.setWeight(80);
+	console.log("나의 BMI 수치는 : " + myBMI.calBMI());
+	
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

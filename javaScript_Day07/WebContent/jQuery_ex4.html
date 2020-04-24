@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jQuery/jquery-3.4.1.min.js"></script>
+				
+		<script>
+			$(document).ready(function() {
+				var wrapObj = $("#wrap");
+				var divObj = $("<div> Hello jQuery </div>");
+				divObj.appendTo(wrapObj);
+				divObj.css("background", "tomato");
+				
+				var aObj = $("<a href='http://www.daum.net' target='_blank'>DAUM</a><br>");
+				aObj.appendTo(wrapObj);
+				
+				var imgObj = $("<img src='img/test.jpg' width='300px' height='200px'>");
+				imgObj.appendTo(wrapObj);
+				
+				var tempObj = {
+					src : "img/test2.png",
+					width: 300,
+					height:200,
+					border:"3px"
+				};
+				
+				var imgObj2 = $("<img>", tempObj);
+				imgObj2.appendTo(wrapObj);
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="wrap">
+			
+			
+		</div>
+	</body>
+</html>

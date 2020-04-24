@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function mainFunction(funCBP, funCBF, number) {
+				for (var i = 1; i <= 10; i++) {
+					console.log(number +" x " +i +" = " +(number * i));
+					if (i <10) {
+						funCBP(i);
+					} else {
+						funCBF();
+					}
+				}
+			}
+			
+			function CallBackProcess(i) {
+				console.log((i*10) +"% Process");
+			}
+			
+			function CallBackFinish() {
+				console.log("Process 완료");
+			}
+			
+			mainFunction(CallBackProcess, CallBackFinish, 7);
+		</script>
+	</head>
+	
+	<body>
+	
+	</body>
+</html>

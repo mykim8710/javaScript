@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			window.onload = function() {
+				var str = "";
+				str += "<h1 id = 'title'>JavaScript</h1>";
+				str += "<img id = 'logo', src = './img/test.png', 'width = 800', 'height=500', 'alt=이미지가 없습니다.'/>";
+				
+				document.body.innerHTML = str;
+				
+				var titleNode = document.getElementById("title")
+				titleNode.style.color = "blue";
+				titleNode.style.border = "1px solid red";
+				
+				var logoNode = document.getElementById("logo")
+				logoNode.style.width = "420px";
+				logoNode.style.height = "280px";
+				
+				/* var titleNode = document.getElementById("title");
+				titleNode.parentNode.removeChild(titleNode);
+				
+				var logoNode = document.getElementById("logo");
+				logoNode.parentNode.removeChild(logoNode); */
+				
+				/* var titleNode = document.getElementById("title");
+				titleNode.innerHTML = "JavaScript -> JS로 바꾼다";
+				
+				var logoNode = document.getElementById("logo");
+				logoNode.setAttribute("src", "./img/test2.jpg");
+				logoNode.setAttribute("height", "500");
+				logoNode.setAttribute("width", "800");
+				logoNode.setAttribute("alt", "이미지가 깨졌습니다."); */	
+			};
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>
